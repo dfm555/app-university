@@ -36,9 +36,18 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    annotate (2.7.1)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 12.0)
     arel (6.0.3)
+    autoprefixer-rails (6.4.0)
+      execjs
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
     coffee-rails (4.1.1)
@@ -52,8 +61,12 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.6.3.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -73,9 +86,11 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    pg (0.18.4)
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -146,12 +161,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  bcrypt (~> 3.1.7)
+  bootstrap-sass (~> 3.3.7)
   byebug
   coffee-rails (~> 4.1.0)
+  font-awesome-rails
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (= 4.2.7)
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
   spring
   sqlite3
