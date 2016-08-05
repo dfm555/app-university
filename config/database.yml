@@ -7,7 +7,6 @@
 default: &default
   adapter: sqlite3
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
@@ -20,7 +19,7 @@ test:
   <<: *default
   database: db/test.sqlite3
 
- production:
+production:
   adapter: postgresql
   database: app-university
   pool: 5
