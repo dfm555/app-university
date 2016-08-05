@@ -38,6 +38,7 @@ gem 'httparty'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "font-awesome-rails"
 gem 'angular-rails-templates'
+gem 'rails_12factor', group: "production"
 #source 'https://rails-assets.org' do
 #  gem 'rails-assets-tether', '>= 1.1.0'
 #end
