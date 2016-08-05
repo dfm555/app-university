@@ -19,4 +19,5 @@
 //= require turbolinks
 //= require morris.min
 //= require raphael.min
+//= require datatables/media/js/dataTables.bootstrap
 //= require_tree .
