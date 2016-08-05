@@ -1,0 +1,15 @@
+{
+  "name": "app-university",
+  "homepage": "https://app-university.herokuapp.com/",
+  "authors": [
+    "dfm555 <dfm556@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}

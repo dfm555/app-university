@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :rols
+  resources :users
+  root 'sessions#new'
   get 'sessions/new'
 
   get '/login', to: 'sessions#new'

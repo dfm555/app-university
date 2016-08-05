@@ -8,7 +8,7 @@ class Session
   end
 
   def current_user
-    User.find_by( user_name: user_name )
+    User.find_by( "user_name = ? or email = ?", user_name, user_name )
   end
 
 end

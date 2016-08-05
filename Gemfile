@@ -37,6 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "font-awesome-rails"
+gem 'angular-rails-templates'
 #source 'https://rails-assets.org' do
 #  gem 'rails-assets-tether', '>= 1.1.0'
 #end
