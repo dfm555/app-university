@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :scores
+  get 'dashboard/index'
+
   resources :rols
   resources :users
   root 'sessions#new'

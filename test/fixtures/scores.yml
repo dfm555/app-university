@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partial_one: 9.99
+  partial_two: MyString
+  final: MyString
+
+two:
+  partial_one: 9.99
+  partial_two: MyString
+  final: MyString
