@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @session = Session.new( session_params  )
     if @session.authenticate
       session[ 'user_id' ] = @session.current_user.id
-      redirect_to dashboard_index_path, notice: 'Bienvenido'
+      redirect_to dashboard_index_path
     else
       render :new
     end
