@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @career.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @career.name %>
+</p>
+
+<p>
+  <strong>Quantity credits:</strong>
+  <%= @career.quantity_credits %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @career.amount %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @career.semester %>
+</p>
+
+<%= link_to 'Edit', edit_career_path(@career.id) %> |
+<%= link_to 'Back', careers_path %>

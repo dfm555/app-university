@@ -3,6 +3,9 @@ class Session
 
   attr_accessor :user_name, :password
 
+  validates :user_name, presence: true
+  validates :password, presence: true
+
   def authenticate
     current_user && current_user.authenticate( password )
   end
