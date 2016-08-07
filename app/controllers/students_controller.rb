@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :logged_in?
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   # GET /students
@@ -19,6 +20,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+    @student.date_of_birth = @student.date_of_birth.to_date
   end
 
   # POST /students
@@ -40,8 +42,12 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1
   # PATCH/PUT /students/1.json
   def update
+
+    @student = Student.new( student_params )
+    @student.id = params[:id]
+
     respond_to do |format|
-      if @student.update(student_params)
+      if @student.update
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
       else
@@ -69,6 +75,8 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.fetch(:student, {})
+      student = params[:student]
+      date_of_birth = Date.new(student["date_of_birth(1i)"].to_i, student["date_of_birth(2i)"].to_i, student["date_of_birth(3i)"].to_i)
+      params.require(:student).permit(:code, :identification, :full_name, :email, :phone_number).merge( date_of_birth: date_of_birth.to_s  )
     end
 end

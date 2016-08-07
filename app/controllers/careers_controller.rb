@@ -1,7 +1,9 @@
 class CareersController < ApplicationController
   before_action :logged_in?
   before_action :set_career, only: [:show, :edit, :update, :destroy]
-
+  def class_active
+    'active'
+  end
   # GET /careers
   # GET /careers.json
   def index

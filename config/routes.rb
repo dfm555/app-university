@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :subjects
   resources :teachers
+  resources :students
   resources :careers
   resources :scores
   get 'dashboard/index'

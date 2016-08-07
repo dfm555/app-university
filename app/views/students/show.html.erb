@@ -1,4 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
+<p>
+  <strong>Code:</strong>
+  <%= @student.code %>
+</p>
+
+<p>
+  <strong>Identification:</strong>
+  <%= @student.identification %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @student.full_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @student.date_of_birth %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @student.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student.id) %> |
 <%= link_to 'Back', students_path %>
