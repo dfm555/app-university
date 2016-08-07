@@ -2,6 +2,12 @@ class Teacher
   include ActiveModel::Model
 
   attr_accessor :id, :code, :identification, :full_name, :date_of_birth, :email, :office, :phone_number, :amount_hour, :created_at, :updated_at, :url
+  validates :code, presence: true
+  validates :identification, presence: true
+  validates :full_name, presence: true
+  validates :user_name, presence: true
+  validates :email, presence: true
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
   BASE_URL = 'https://api-university.herokuapp.com/teachers'
   HEADERS = {
