@@ -11,4 +11,7 @@
 #
 
 class Score < ActiveRecord::Base
+  validates :partial_one, presence: true
+  validates :partial_two, presence: true
+  validates :final, presence: true
 end
