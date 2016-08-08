@@ -11,23 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :code %><br>
-    <%= f.text_field :code %>
+  <div class="form-group">
+    <%= f.label :code, class: "col-sm-3 control-label" %><br>
+    <div class="col-sm-4">
+      <%= f.text_field :code , :class=>"form-control"%>
+    </div>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :quantity_credits %><br>
     <%= f.number_field :quantity_credits %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :amount %><br>
     <%= f.number_field :amount %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :semester %><br>
     <%= f.number_field :semester %>
   </div>
