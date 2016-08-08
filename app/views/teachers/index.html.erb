@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Teachers</h1>
+
+<table class="table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Identification</th>
+      <th>Full name</th>
+      <th>Date of birth</th>
+      <th>Email</th>
+      <th>Office</th>
+      <th>Phone number</th>
+      <th>Amount hour</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.code %></td>
+        <td><%= teacher.identification %></td>
+        <td><%= teacher.full_name %></td>
+        <td><%= teacher.date_of_birth %></td>
+        <td><%= teacher.email %></td>
+        <td><%= teacher.office %></td>
+        <td><%= teacher.phone_number %></td>
+        <td><%= teacher.amount_hour %></td>
+        <td><%= link_to 'Show', teacher_path(teacher.id) %></td>
+        <td><%= link_to 'Edit', edit_teacher_path(teacher.id) %></td>
+        <td><%= link_to 'Destroy', teacher_path(teacher.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Teacher', new_teacher_path %>

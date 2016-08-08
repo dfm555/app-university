@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :subjects
+  resources :teachers
+  resources :students
+  resources :careers
+  resources :scores
+  get 'dashboard/index'
+
   resources :rols
   resources :users
   root 'sessions#new'

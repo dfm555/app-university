@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Careers</h1>
+
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Quantity credits</th>
+      <th>Amount</th>
+      <th>Semester</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @careers.each do |career| %>
+      <tr>
+        <td><%= career.code %></td>
+        <td><%= career.name %></td>
+        <td><%= career.quantity_credits %></td>
+        <td><%= career.amount %></td>
+        <td><%= career.semester %></td>
+        <td><%= link_to 'Show', career_path(career.id) %></td>
+        <td><%= link_to 'Edit', edit_career_path(career.id) %></td>
+        <td><%= link_to 'Destroy', career_path(career.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Career', new_career_path, class: "btn btn-primary btn-sm" %>

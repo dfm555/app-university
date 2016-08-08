@@ -12,14 +12,20 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application'%>
+   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-  <%= yield %>
-</div>
+<div id="wrapper">
+  <%=render 'layouts/navigation' %>
+  <div id="page-wrapper">
 
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>

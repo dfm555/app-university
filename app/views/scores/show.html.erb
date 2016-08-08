@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Partial one:</strong>
+  <%= @score.partial_one %>
+</p>
+
+<p>
+  <strong>Partial two:</strong>
+  <%= @score.partial_two %>
+</p>
+
+<p>
+  <strong>Final:</strong>
+  <%= @score.final %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>
