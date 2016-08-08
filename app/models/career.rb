@@ -1,7 +1,9 @@
 class Career
   include ActiveModel::Model
+  include ActiveModel::Validations
+  validates_presence_of :code, :name, :quantity_credits, :semester
 
-  attr_accessor :id, :code, :name, :full_name, :quantity_credits, :amount, :semester, :created_at, :updated_at, :url
+  attr_accessor :id, :code, :name, :quantity_credits, :amount, :semester, :created_at, :updated_at, :url
 
   BASE_URL = 'https://api-university.herokuapp.com/careers'
   HEADERS_API = {

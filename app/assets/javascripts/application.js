@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require morris.min
 //= require raphael.min
+//= require rails.validations
 //= require_tree .

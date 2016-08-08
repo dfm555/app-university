@@ -37,6 +37,7 @@ gem 'httparty'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "font-awesome-rails"
 gem 'rails_12factor', group: "production"
+gem 'client_side_validations'
 #source 'https://rails-assets.org' do
 #  gem 'rails-assets-tether', '>= 1.1.0'
 #end
