@@ -5,7 +5,7 @@ class Career
 
   BASE_URL = 'https://api-university.herokuapp.com/careers'
   HEADERS_API = {
-      'token' => '7b06d11e-d6da-41e9-8090-eaf680c1d225'
+      'token' => 'ef69a868-9912-43f6-9808-b86908ff64cb'
   }
 
 
@@ -13,7 +13,7 @@ class Career
     BASE_URL + request_path + '.json'
   end
 
-  def pesisted?
+  def persisted?
     self.id.present?
   end
 
